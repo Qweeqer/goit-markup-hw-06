@@ -58,14 +58,16 @@
                             <use xlink:href="./images/icons.svg#icon-closeblack"></use>
                         </svg>
                     </button>
-                    <form name="signup_form" autocomplete="on" novalidate>
+                    <form class="form" name="signup_form" autocomplete="on" novalidate>
+                        <div class="form-group" role="group" aria-labelledby="contact-details-head">
+                        <p id="contact-details-head">Оставьте свои данные, мы вам перезвоним</p>
                         <label>
                             Имя
-                            <input type="name" name="name" />
+                            <input type="text" name="username" autofocus />
                         </label>
                         <label>
                             Телефон
-                            <input type="tel" name="tel" />
+                            <input type="tel" name="phone_number" />
                         </label>
                     
                         <label>
@@ -75,9 +77,15 @@
                     
                         <label>
                             Комментарий
-                            <input type="text" name="text" />
+                            <textarea name="feedback" placeholder="Введите текст">
+                            </textarea>
                         </label>
-                    
+                        </div>
+                        <label>
+                            <input class="checkbox" type="checkbox" name="hobby" value="agreement" />
+                            Соглашаюсь с рассылкой и принимаю Условия договора 
+                        </label>
+                        
                         <button type="submit">Отправить</button>
                     </form>
                 </div>
